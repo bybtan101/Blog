@@ -1,0 +1,14 @@
+<h1>Ben's Blog!</h1>
+
+<%= link_to "Create New Entry", new_post_path %>
+<br>
+
+<hr>
+ <% @posts.each do |p| %>
+   <ul><p>
+   	<%= p.topic %> 
+   	<%= p.message %>
+   </p></ul>
+<hr>
+
+<% end %>

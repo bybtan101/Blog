@@ -1,0 +1,19 @@
+<% if @post.errors.any? %>
+    <% @post.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+<% end %>
+
+<%= form_for @post do |f| %>
+  <%= f.label "Topic" %>
+  <%= f.text_field :name, :size => "33x5" %>
+  <br>
+  <%= f.label "Message" %>
+  <%= f.text_area :message, :size => "35x5" %>
+  <br>
+  <br>
+  <%= f.submit %>
+  <br>
+  <br>
+  <%= link_to "Back To Dashboard", back_post_path(@post) %>
+<% end %>
