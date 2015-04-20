@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  validates :topic, presence: true
+  validates :name, presence: true
   validates :message, presence: true
   has_many :comments
 
